@@ -1,3 +1,5 @@
+from fastapi import HTTPException
+
 def response(data, message, status_code=200):
     return {
         "data": data,
@@ -7,5 +9,5 @@ def response(data, message, status_code=200):
     }
 
 
-def error_response(error, message, code=400):
-    return {"error": error, "code": code, "message": message}
+def error_response(message, code=400):
+    raise HTTPException(code, message)
