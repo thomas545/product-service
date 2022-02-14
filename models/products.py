@@ -19,11 +19,11 @@ class CreateProduct(BaseProduct):
 
 
 class UpdateProduct(BaseModel):
-    title = Optional[str]
-    description = Optional[str]
-    category_name = Optional[str]
-    price = Optional[float]
-    quantity = Optional[int]
+    title: Optional[str]
+    description: Optional[str]
+    category_name: Optional[str]
+    price: Optional[float]
+    quantity: Optional[int]
 
     class Config:
         arbitrary_types_allowed = True
